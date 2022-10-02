@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lista de integrantes</title>
+
+         <!-- CSS Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous"/>
+    </head>
+    <body style="background: #0F2027;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
+        <header>
+            <br /><u>
+            <h1 style="color:#00008B" class="text-center">Integrantes</h1>
+            </u><br />
+        </header>
+        <section class="text-center">
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col" class="text-center">Edad</th>
+                        <th scope="col" class="text-right">Fecha de consulta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for person in persona %}
+                    <tr>
+                        <td style="color:aliceblue">{{person.nombre}}</td>
+                        <td style="color:aliceblue">{{person.apellido}}</td>
+                        <td style="color:aliceblue">{{person.edad}}</td>
+                        <td style="color:aliceblue">{{person.fecha_consulta}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </body>
+</html>
