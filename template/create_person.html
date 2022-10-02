@@ -8,11 +8,30 @@
 </head>
 <body>
 {% extends "layout.html" %}
-
+{% load crispy_forms_tags %}
 {% block content %}  
 
-    <h1>Página en construcción. Vuelve en un mes</h1>
+    <h1>Soy nuevo, no me pidas mucho formato &#128557 </h1>
 
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            ¡Algo anda mal!
+        </div>
+    {% endif %}
+
+        <h2> Registro de Persona</h2>
+        <form action={% url 'crear_persona' %} method="post">
+            {% csrf_token %}
+    
+            <table>
+                {{formulario.as_table}}
+            </table>
+    
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+
+        </form>
 {% endblock %}
 </body>
 </html>

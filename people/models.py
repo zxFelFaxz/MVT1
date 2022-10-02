@@ -4,8 +4,8 @@ from django.db import models
 class Person(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
-    edad = models.IntegerField()
-    fecha_consulta = models.DateField(null=True)
+    Nrofav = models.IntegerField()
+    fecha_nac = models.DateField(null=True)
     
     def __str__(self):
-        return self.persona
+        return f"{self.nombre}{self.apellido}"

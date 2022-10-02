@@ -20,7 +20,7 @@
 
         <header>
             <br /><u>
-            <h1 style="color:#00008B" class="text-center">Integrantes</h1>
+            <h1 style="color:#00008B" class="text-center">Lista de integrantes</h1>
             </u><br />
         </header>
         <section class="text-center">
@@ -29,17 +29,17 @@
                     <tr>
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
-                        <th scope="col" class="text-center">Edad</th>
-                        <th scope="col" class="text-right">Fecha de consulta</th>
+                        <th scope="col" class="text-center">Nro Favorito</th>
+                        <th scope="col" class="text-right">Fecha de nacimiento</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for person in persona %}
+                    {% for persona in persona %}
                     <tr>
-                        <td style="color:aliceblue">{{person.nombre}}</td>
-                        <td style="color:aliceblue">{{person.apellido}}</td>
-                        <td style="color:aliceblue">{{person.edad}}</td>
-                        <td style="color:aliceblue">{{person.fecha_consulta}}</td>
+                        <td style="color:aliceblue">{{persona.nombre}}</td>
+                        <td style="color:aliceblue">{{persona.apellido}}</td>
+                        <td style="color:aliceblue">{{persona.Nrofav}}</td>
+                        <td style="color:aliceblue">{{persona.fecha_nac}}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
