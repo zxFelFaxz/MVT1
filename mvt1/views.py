@@ -6,6 +6,10 @@ from django.template import Context, Template, loader
 
 from people.models import Person
 
+def Home(request):
+    template = loader.get_template('Home.html')
+    render_template = template.render({})
+    return HttpResponse(render_template)
 
 def create_person(request):
     persona1 = Person(nombre="Lujan", apellido="Ortega", edad=24, fecha_consulta=datetime.now())
